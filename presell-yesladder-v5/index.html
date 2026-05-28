@@ -134,84 +134,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0 auto;
   }
 
-  /* avatar */
-  .quiz-avatar {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 2px solid var(--pink);
-    box-shadow: 0 0 0 3px rgba(229,9,20,.18), 0 6px 18px rgba(0,0,0,.35);
-    margin-bottom: 14px;
-    background-color: var(--card);
-    background-image: url('murilo-avatar.png');
-    background-size: 160%;
-    background-position: 50% 20%;
-    background-repeat: no-repeat;
+  /* profile card (Instagram-style header image) */
+  .quiz-profile {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 24px;
+    display: block;
     flex-shrink: 0;
   }
-
-  /* identity block (name + CREF + IG) */
-  .quiz-identity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 26px;
-    text-align: center;
+  .quiz-profile img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
-  .quiz-identity-name {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: -.005em;
-    line-height: 1.25;
-  }
-  .quiz-identity-name .role {
-    font-weight: 500;
-    color: var(--text-dim);
-  }
-  .quiz-identity-name .sep {
-    color: var(--text-mut);
-    font-weight: 400;
-    opacity: .65;
-  }
-  .quiz-identity-meta {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    font-size: .76rem;
-    font-weight: 500;
-    color: var(--text-mut);
-    letter-spacing: .01em;
-  }
-  .quiz-identity-meta .dot-sep {
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background: currentColor;
-    opacity: .55;
-  }
-  .quiz-identity-ig {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .quiz-identity-ig svg {
-    width: 13px;
-    height: 13px;
-    color: var(--pink-lt);
-    filter: drop-shadow(0 0 4px rgba(229,9,20,.25));
-  }
-  .quiz-identity-ig span {
-    color: var(--text-dim);
-    font-weight: 600;
+  @media (min-width: 640px) {
+    .quiz-profile { max-width: 250px; }
   }
 
   /* progress */
@@ -493,25 +430,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <main class="quiz-stage" id="quizStage" aria-live="polite">
-  <div class="quiz-avatar" role="img" aria-label="Murilo Herbst"></div>
-  <div class="quiz-identity">
-    <div class="quiz-identity-name">
-      <span>Murilo Herbst</span>
-      <span class="sep" aria-hidden="true">·</span>
-      <span class="role">Personal Trainer</span>
-    </div>
-    <div class="quiz-identity-meta">
-      <span>CREF 147533-G/SP</span>
-      <span class="dot-sep" aria-hidden="true"></span>
-      <span class="quiz-identity-ig" aria-label="37.912 seguidores no Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="2" y="2" width="20" height="20" rx="5"/>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-        </svg>
-        <span>37.912</span>
-      </span>
-    </div>
+  <div class="quiz-profile">
+    <img src="murilo-profile.png" alt="Perfil de @muriloherbst — Personal Trainer / Nutrição 8/8 — 38,8 mil seguidores" loading="eager">
   </div>
   <div class="quiz-progress" id="quizProgress" aria-hidden="true">
     <div class="dot is-active"></div>
