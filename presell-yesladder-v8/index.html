@@ -367,6 +367,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .btn-no:hover { color: var(--text); }
 
+  /* scarcity (final question) */
+  .quiz-scarcity {
+    margin: 0;
+    font-size: .92rem;
+    font-weight: 700;
+    color: var(--pink-lt);
+    text-align: center;
+    letter-spacing: -.01em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    align-self: center;
+  }
+  .quiz-scarcity::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--pink);
+    flex-shrink: 0;
+    animation: pulse-dot 1.4s ease-out infinite;
+  }
+  .quiz-scarcity strong {
+    color: var(--pink-lt);
+    font-weight: 900;
+  }
+  @keyframes pulse-dot {
+    0%   { box-shadow: 0 0 0 0 rgba(229,9,20,.55); }
+    70%  { box-shadow: 0 0 0 9px rgba(229,9,20,0); }
+    100% { box-shadow: 0 0 0 0 rgba(229,9,20,0); }
+  }
+
   /* ── Footer ──────────────────────────────────────────────── */
   .site-footer {
     position: relative;
@@ -430,6 +463,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main class="quiz-stage" id="quizStage" aria-live="polite">
   <div class="quiz-avatar" role="img" aria-label="Murilo Herbst"></div>
+  <div class="quiz-progress" id="quizProgress" aria-hidden="true">
+    <div class="dot is-active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
 
   <div class="quiz-card" id="quizCard">
     <!-- conteúdo injetado por JS -->
@@ -494,6 +533,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var currentIndex = 0;
   var cardEl = document.getElementById('quizCard');
   var stageEl = document.getElementById('quizStage');
+  var progressEl = document.getElementById('quizProgress');
+  var vagasTimer = null;
+
+  function updateProgress() {
+    var dots = progressEl.querySelectorAll('.dot');
+    for (var i = 0; i < dots.length; i++) {
+      if (i <= currentIndex) dots[i].classList.add('is-active');
+      else dots[i].classList.remove('is-active');
+    }
+  }
+
+  function startVagasCountdown() {
+    var el = document.getElementById('vagasCount');
+    if (!el) return;
+    if (vagasTimer) { clearInterval(vagasTimer); vagasTimer = null; }
+    var current = 33;
+    var min = 4;
+    vagasTimer = setInterval(function() {
+      if (current <= min) {
+        clearInterval(vagasTimer);
+        vagasTimer = null;
+        return;
+      }
+      var step = Math.random() < 0.5 ? 1 : 2;
+      current = Math.max(min, current - step);
+      el.textContent = current;
+    }, 2000);
+  }
 
   function buildVSLHref() {
     var target = VSL_URL;
@@ -534,6 +601,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           '<a class="btn-no" href="' + href + '" data-answer="no">' + q.noLabel + '</a>' +
         '</div>';
     } else {
+      var scarcityHTML = isFirst
+        ? '<p class="quiz-scarcity">Só temos mais <strong id="vagasCount">33</strong> vagas disponíveis</p>'
+        : '';
       cardEl.innerHTML =
         premiumHeader +
         (q.kicker ? '<div class="quiz-kicker">' + q.kicker + '</div>' : '') +
@@ -541,14 +611,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         '<h1 class="quiz-question">' + q.question + '</h1>' +
         '<div class="quiz-actions">' +
           '<button class="btn btn-primary" type="button" data-answer="yes">' + q.yesLabel + '</button>' +
+          scarcityHTML +
           '<button class="btn-no" type="button" data-answer="no">' + q.noLabel + '</button>' +
         '</div>';
+      if (isFirst) startVagasCountdown();
     }
 
     var btns = cardEl.querySelectorAll('[data-answer]');
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', onAnswer);
     }
+    updateProgress();
   }
 
   function onAnswer(e) {
