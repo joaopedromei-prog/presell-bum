@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T922HR39');</script>
+<!-- End Google Tag Manager -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<!-- Backredirect — Fail-proof (multi-layer) -->
+<script>
+(function() {
+  // TODO: trocar pela URL real da VSL antes do deploy
+  var backUrl = 'https://bumbumpessego.com/bum-fb-f-pvs/nt/';
+  var redirected = false;
+  var pageReady = false;
+
+  setTimeout(function() { pageReady = true; }, 1500);
+
+  function redirect() {
+    if (redirected) return;
+    redirected = true;
+    var target = backUrl;
+    var search = window.location.search;
+    if (search && search.length > 1) {
+      target += (target.indexOf('?') >= 0 ? '&' : '?') + search.substring(1);
+    }
+    window.location.replace(target);
+  }
+
+  if (window.history && window.history.pushState) {
+    for (var i = 0; i < 5; i++) {
+      history.pushState({ br: i }, '', window.location.href);
+    }
+    window.addEventListener('popstate', function() { redirect(); });
+  }
+
+  document.addEventListener('mouseleave', function(e) {
+    if (!pageReady) return;
+    if (e.clientY <= 0) redirect();
+  });
+
+  window.addEventListener('pageshow', function(e) {
+    if (e.persisted) redirect();
+  });
+})();
+</script>
+<!-- End Backredirect -->
+<!-- UTMify -->
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+<script>
+  window.pixelId = "69cbf431a033eb27429d85a2";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+<!-- End UTMify -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aula Exclusiva — Método de Ativação para Treino de Glúteo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #141414;
+    --bg-deep:   #0B0B0B;
+    --pink:      #E50914;
+    --pink-lt:   #F6121D;
+    --pink-dk:   #B0060F;
+    --card:      #1F1F1F;
+    --card-2:    #181818;
+    --text:      #FFFFFF;
+    --text-dim:  #D2D2D2;
+    --text-mut:  #808080;
+    --border:    rgba(255,255,255,.10);
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body {
+    background: var(--bg-deep);
+    color: var(--text);
+    font-family: 'Geist', -apple-system, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Background glow ─────────────────────────────────────── */
+  body::before {
+    content: "";
+    position: fixed;
+    top: -160px; right: -120px;
+    width: 720px; height: 720px;
+    background: radial-gradient(circle, rgba(229,9,20,.22), transparent 62%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    bottom: -200px; left: -160px;
+    width: 540px; height: 540px;
+    background: radial-gradient(circle, rgba(229,9,20,.14), transparent 62%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Quiz stage ──────────────────────────────────────────── */
+  .quiz-stage {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px clamp(16px, 5vw, 40px) 96px;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* avatar */
+  .quiz-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid var(--pink);
+    box-shadow: 0 0 0 3px rgba(229,9,20,.18), 0 6px 18px rgba(0,0,0,.35);
+    margin-bottom: 26px;
+    background-color: var(--card);
+    background-image: url('murilo-avatar.png');
+    background-size: 160%;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+
+  /* progress */
+  .quiz-progress {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 44px;
+    width: 100%;
+    max-width: 320px;
+  }
+  .quiz-progress .dot {
+    flex: 1;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255,255,255,.10);
+    transition: background-color .35s ease, box-shadow .35s ease;
+  }
+  .quiz-progress .dot.is-active {
+    background: var(--pink);
+    box-shadow: 0 0 14px rgba(229,9,20,.55);
+  }
+
+  /* card */
+  .quiz-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .22s ease, transform .22s ease;
+  }
+  .quiz-card.is-out {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  /* ── "Aula Privada" premium header (Q1 only) ─────────────── */
+  .quiz-private-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 28px;
+    animation: privateHeaderIn .75s cubic-bezier(.16,1,.3,1) both;
+  }
+  .quiz-private-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 18px 8px 15px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.015) 100%);
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 999px;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.07),
+      inset 0 0 0 1px rgba(229,9,20,.06),
+      0 6px 22px rgba(0,0,0,.4);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .quiz-private-badge::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(
+      105deg,
+      transparent 0%,
+      rgba(255,255,255,.04) 40%,
+      rgba(255,255,255,.13) 50%,
+      rgba(255,255,255,.04) 60%,
+      transparent 100%
+    );
+    transform: translateX(-160%);
+    animation: privateShimmer 6.8s ease-in-out 1.4s infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .quiz-private-lock {
+    width: 13px;
+    height: 13px;
+    color: var(--pink-lt);
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 6px rgba(229,9,20,.35));
+    animation: privateBreath 3.2s ease-in-out infinite;
+    z-index: 2;
+  }
+  .quiz-private-label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.93);
+    z-index: 2;
+  }
+  .quiz-private-divider {
+    width: 110px;
+    height: 1px;
+    margin-top: 18px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(229,9,20,.5) 50%,
+      transparent 100%
+    );
+    transform-origin: center;
+    animation: privateDividerIn .65s cubic-bezier(.16,1,.3,1) .28s both;
+  }
+
+  @keyframes privateHeaderIn {
+    0%   { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes privateShimmer {
+    0%   { transform: translateX(-160%); }
+    14%  { transform: translateX(360%); }
+    100% { transform: translateX(360%); }
+  }
+  @keyframes privateBreath {
+    0%, 100% { opacity: .72; }
+    50%      { opacity: 1; }
+  }
+  @keyframes privateDividerIn {
+    0%   { opacity: 0; transform: scaleX(0); }
+    100% { opacity: 1; transform: scaleX(1); }
+  }
+
+  .quiz-kicker {
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--pink-lt);
+    margin-bottom: 24px;
+  }
+  .quiz-intro {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .quiz-intro strong {
+    color: var(--text);
+    font-weight: 800;
+  }
+  .quiz-question {
+    font-size: clamp(1.45rem, 4.6vw, 1.95rem);
+    font-weight: 900;
+    line-height: 1.22;
+    letter-spacing: -.02em;
+    color: var(--text);
+    margin-bottom: 44px;
+  }
+
+  /* buttons */
+  .quiz-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 0;
+    border-radius: 10px;
+    padding: 18px 26px;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform .14s ease, background-color .2s ease, box-shadow .2s ease;
+    min-height: 58px;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    background: var(--pink);
+    color: #fff;
+    box-shadow: 0 8px 26px rgba(229,9,20,.42);
+    letter-spacing: -.01em;
+  }
+  .btn-primary:hover { background: var(--pink-lt); }
+  .btn-primary.is-final {
+    font-size: 1.15rem;
+    padding: 20px 28px;
+    min-height: 64px;
+    box-shadow: 0 10px 32px rgba(229,9,20,.55);
+  }
+  .btn-no {
+    background: transparent;
+    color: #BFBFBF;
+    font-weight: 500;
+    font-size: .9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 10px 12px;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    min-height: 0;
+    transition: color .15s ease;
+  }
+  .btn-no:hover { color: var(--text); }
+
+  /* ── Footer ──────────────────────────────────────────────── */
+  .site-footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 22px clamp(16px, 4vw, 56px) 28px;
+    margin-top: auto;
+  }
+  .footer-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; }
+  .footer-links a, .footer-links button.disclaimer-toggle {
+    font-size: .72rem;
+    font-weight: 600;
+    color: var(--text-mut);
+    text-decoration: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .footer-links a:hover, .footer-links button.disclaimer-toggle:hover {
+    color: var(--pink-lt);
+    text-decoration: underline;
+  }
+  .footer-links .sep { color: var(--text-mut); font-size: .72rem; }
+  .footer-disclaimer {
+    display: none;
+    font-size: .68rem;
+    line-height: 1.65;
+    color: var(--text-mut);
+    max-width: 720px;
+    text-align: left;
+  }
+  .footer-disclaimer.is-open { display: block; }
+  .footer-disclaimer + .footer-disclaimer { margin-top: 8px; }
+
+  /* ── Instagram-style comments (Q1 only) ──────────────────── */
+  .ig-comments {
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,.07);
+    text-align: left;
+    animation: igCommentsIn .55s cubic-bezier(.16,1,.3,1) .25s both;
+  }
+  .ig-comments-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .78rem;
+    color: var(--text-mut);
+    font-weight: 500;
+    margin-bottom: 18px;
+    letter-spacing: .01em;
+  }
+  .ig-comments-header svg {
+    width: 18px;
+    height: 18px;
+    color: var(--text-dim);
+  }
+  .ig-comments-header strong {
+    color: var(--text-dim);
+    font-weight: 600;
+  }
+  .ig-comment {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    align-items: flex-start;
+  }
+  .ig-comment + .ig-comment {
+    margin-top: 2px;
+  }
+  .ig-avatar {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: var(--card);
+  }
+  .ig-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .ig-avatar.is-ring {
+    padding: 2px;
+    background: conic-gradient(from 45deg, #f9ce34, #ee2a7b, #6228d7, #f9ce34);
+  }
+  .ig-avatar.is-ring img {
+    border-radius: 50%;
+    border: 2px solid var(--bg-deep);
+  }
+  .ig-body {
+    flex: 1;
+    min-width: 0;
+    padding-top: 1px;
+  }
+  .ig-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .ig-text-wrap {
+    flex: 1;
+    min-width: 0;
+    font-size: .88rem;
+    line-height: 1.42;
+    color: var(--text);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .ig-user {
+    font-weight: 700;
+    color: var(--text);
+    margin-right: 4px;
+  }
+  .ig-verified {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 4px;
+    color: #3897F0;
+  }
+  .ig-verified svg {
+    width: 13px;
+    height: 13px;
+    display: block;
+  }
+  .ig-text {
+    color: var(--text);
+    font-weight: 400;
+  }
+  .ig-mention {
+    color: #4a8fd5;
+  }
+  .ig-meta {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: .72rem;
+    color: var(--text-mut);
+    font-weight: 500;
+  }
+  .ig-meta .ig-time { font-weight: 500; }
+  .ig-meta .ig-likes { font-weight: 600; color: var(--text-mut); }
+  .ig-meta .ig-reply { font-weight: 600; color: var(--text-mut); cursor: default; }
+  .ig-meta .ig-more {
+    display: inline-flex;
+    color: var(--text-mut);
+    opacity: .8;
+    letter-spacing: 1px;
+  }
+  .ig-heart {
+    flex-shrink: 0;
+    margin-top: 4px;
+    background: none;
+    border: 0;
+    padding: 4px;
+    margin-right: -4px;
+    cursor: pointer;
+    color: var(--text-mut);
+    opacity: .85;
+    transition: transform .14s ease, opacity .14s ease, color .14s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ig-heart:hover { opacity: 1; }
+  .ig-heart:active { transform: scale(.85); }
+  .ig-heart svg {
+    width: 13px;
+    height: 13px;
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    transition: fill .18s ease, stroke .18s ease, transform .18s ease;
+  }
+  .ig-heart.is-liked {
+    color: #ed4956;
+    opacity: 1;
+    animation: igHeartPop .32s cubic-bezier(.34,1.56,.64,1);
+  }
+  .ig-heart.is-liked svg {
+    fill: #ed4956;
+    stroke: #ed4956;
+  }
+  @keyframes igHeartPop {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.32); }
+    70%  { transform: scale(.95); }
+    100% { transform: scale(1); }
+  }
+  .ig-replies-toggle {
+    margin: 6px 0 6px 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: .73rem;
+    color: var(--text-mut);
+    font-weight: 600;
+    background: none;
+    border: 0;
+    padding: 4px 0;
+    cursor: pointer;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+    transition: color .15s ease;
+  }
+  .ig-replies-toggle:hover { color: var(--text-dim); }
+  .ig-replies-toggle .ig-replies-dash {
+    width: 24px;
+    height: 1px;
+    background: var(--text-mut);
+    opacity: .55;
+  }
+  .ig-replies {
+    display: none;
+    margin-left: 50px;
+    margin-bottom: 4px;
+  }
+  .ig-replies.is-open { display: block; }
+  .ig-replies .ig-comment {
+    padding: 6px 0;
+  }
+  .ig-replies .ig-avatar {
+    width: 30px;
+    height: 30px;
+  }
+  .ig-replies .ig-text-wrap {
+    font-size: .85rem;
+  }
+  .ig-replies .ig-meta {
+    font-size: .7rem;
+    margin-top: 4px;
+  }
+
+  @keyframes igCommentsIn {
+    0%   { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Responsive ──────────────────────────────────────────── */
+  @media (min-width: 640px) {
+    .quiz-stage { padding-top: 48px; }
+    .btn-primary { width: auto; min-width: 280px; align-self: center; }
+    .ig-comments { max-width: 520px; align-self: center; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T922HR39"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<main class="quiz-stage" id="quizStage" aria-live="polite">
+  <div class="quiz-avatar" role="img" aria-label="Murilo Herbst"></div>
+  <div class="quiz-progress" id="quizProgress" aria-hidden="true">
+    <div class="dot is-active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <div class="quiz-card" id="quizCard">
+    <!-- conteúdo injetado por JS -->
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <nav class="footer-links" aria-label="Links legais">
+      <a href="https://bumbumpessego.com/bum-fb-vsl-b/privacidade.html">Política de Privacidade</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="https://bumbumpessego.com/bum-fb-vsl-b/termos.html">Termos de Uso</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="mailto:thescalers01@gmail.com">Contato</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <button class="disclaimer-toggle" type="button" id="disclaimerToggle" aria-expanded="false" aria-controls="disclaimer1 disclaimer2">Aviso legal</button>
+    </nav>
+    <p class="footer-disclaimer" id="disclaimer1">
+      Este site não é afiliado, associado, patrocinado ou endossado pela Netflix, Inc., Facebook, Instagram, Meta Platforms Inc., Google LLC, YouTube, TikTok ou qualquer outra plataforma de mídia social. Os nomes e logotipos dessas empresas são marcas registradas de seus respectivos proprietários.
+    </p>
+    <p class="footer-disclaimer" id="disclaimer2">
+      Os resultados apresentados são individuais e podem variar de pessoa para pessoa, dependendo de fatores como histórico de treino, alimentação, descanso, genética e disciplina na execução do método. Este conteúdo tem caráter exclusivamente educacional e não substitui orientação médica, fisioterapêutica ou nutricional individualizada. Consulte um profissional de saúde antes de iniciar qualquer programa de exercícios.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // TODO: trocar pela URL real da VSL antes do deploy
+  var VSL_URL = 'https://bumbumpessego.com/bum-fb-f-pvs/nt/';
+
+  var COMMENTS = [
+    {
+      avatar: 'https://i.pravatar.cc/120?img=47',
+      ring: true,
+      user: 'Ju Alves',
+      verified: false,
+      text: 'caraca Murilo, finalmente alguém explicando de um jeito que dá pra entender kkk amei demais 🙏',
+      time: '12 h',
+      likes: 47
+    },
+    {
+      avatar: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=200&h=200&fit=crop',
+      ring: false,
+      user: 'Cami Rodrigues',
+      verified: false,
+      text: '👏👏👏👏👏',
+      time: '9 h',
+      likes: 14
+    },
+    {
+      avatar: 'https://i.pravatar.cc/120?img=49',
+      ring: true,
+      user: 'Patricia Mendes',
+      verified: true,
+      text: 'Tô viciada nesse método 😍😍 já indiquei pra metade das amigas',
+      time: '7 h',
+      likes: 22,
+      replies: [
+        {
+          avatar: 'murilo-avatar.png',
+          ring: true,
+          user: 'Murilo Herbst',
+          verified: true,
+          text: 'ai que felicidade ler isso Patricia 🙏 obrigado de coração',
+          time: '6 h',
+          likes: 8
+        },
+        {
+          avatar: 'https://i.pravatar.cc/120?img=36',
+          ring: false,
+          user: 'Carol Mendes',
+          verified: false,
+          text: 'Tô junto, é a primeira vez que sinto resultado de verdade 🙏',
+          time: '5 h',
+          likes: 1
+        }
+      ]
+    },
+    {
+      avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop',
+      ring: false,
+      user: 'Mariana Lima',
+      verified: false,
+      text: 'Salvei pra ver à noite!! Tô ansiosaaa pra começar',
+      time: '6 h',
+      likes: 3
+    },
+    {
+      avatar: 'https://i.pravatar.cc/120?img=44',
+      ring: false,
+      user: 'Bruna Silva',
+      verified: false,
+      text: 'Faz 3 semanas que sigo as dicas do <span class="ig-mention">@muriloherbst</span> e o resultado tá assustando até meu marido kkkk fiquei sem palavras',
+      time: '8 h',
+      likes: 31
+    },
+    {
+      avatar: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=200&h=200&fit=crop',
+      ring: false,
+      user: 'Sarah Oliveira',
+      verified: false,
+      text: '🔥🔥🔥',
+      time: '5 h',
+      likes: 5
+    },
+    {
+      avatar: 'https://i.pravatar.cc/120?img=20',
+      ring: true,
+      user: 'Emily Carter',
+      verified: false,
+      text: "I don't speak portuguese but my friend told me to try this and the results in 1 month are insane 🙌 amazing work coach",
+      time: '11 h',
+      likes: 18
+    },
+    {
+      avatar: 'https://i.pravatar.cc/120?img=24',
+      ring: false,
+      user: 'Nathy Ribeiro',
+      verified: false,
+      text: 'Top demais essa explicação prof, ninguém fala desse jeito',
+      time: '4 h',
+      likes: 9
+    },
+    {
+      avatar: 'https://i.pravatar.cc/120?img=10',
+      ring: false,
+      user: 'Fernanda Almeida',
+      verified: false,
+      text: 'Era exatamente o que eu precisava ouvir hoje, obrigada 🥹',
+      time: '3 h',
+      likes: 4
+    },
+    {
+      avatar: 'https://i.pravatar.cc/120?img=32',
+      ring: false,
+      user: 'Larissa Alves Ferreira',
+      verified: false,
+      text: 'Onde encontro mais aulas suas Murilo??',
+      time: '2 h',
+      likes: 1,
+      replies: [
+        {
+          avatar: 'murilo-avatar.png',
+          ring: true,
+          user: 'Murilo Herbst',
+          verified: true,
+          text: 'Larissa, é só clicar no botão aqui em cima que abre a aula completa 🙌',
+          time: '1 h',
+          likes: 3
+        }
+      ]
+    },
+    {
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
+      ring: false,
+      user: 'Daniela Costa',
+      verified: false,
+      text: 'Já me inscrevi 💪',
+      time: '1 h',
+      likes: 2
+    }
+  ];
+
+  var QUESTIONS = [
+    {
+      kicker: '',
+      intro: '',
+      question: 'Essa aula é exclusiva para <strong>mulheres</strong>. Você é mulher?',
+      yesLabel: 'Sim, sou mulher',
+      noLabel: 'Não sou'
+    },
+    {
+      kicker: 'Pergunta 2 de 4',
+      intro: '',
+      question: 'Você sente o GLÚTEO queimar de verdade quando treina, ou sente mais a coxa e a lombar trabalhando?',
+      yesLabel: 'Sinto mais a coxa e a lombar',
+      noLabel: 'Sinto o glúteo queimando'
+    },
+    {
+      kicker: 'Pergunta 3 de 4',
+      intro: '',
+      question: 'Você topa ver uma sequência simples que ativa as 9 partes do bumbum?',
+      yesLabel: 'Quero ver a sequência',
+      noLabel: 'Prefiro continuar como tô'
+    },
+    {
+      kicker: 'Última pergunta',
+      intro: '',
+      question: 'Você se compromete a assistir essa aula até o final e me mandar uma opinião sincera depois?',
+      yesLabel: 'Eu me comprometo',
+      noLabel: 'Vou só dar uma olhada rápida'
+    }
+  ];
+
+  var currentIndex = 0;
+  var cardEl = document.getElementById('quizCard');
+  var progressEl = document.getElementById('quizProgress');
+  var stageEl = document.getElementById('quizStage');
+
+  function updateProgress() {
+    var dots = progressEl.querySelectorAll('.dot');
+    for (var i = 0; i < dots.length; i++) {
+      if (i <= currentIndex) dots[i].classList.add('is-active');
+      else dots[i].classList.remove('is-active');
+    }
+  }
+
+  function buildVSLHref() {
+    var target = VSL_URL;
+    var search = window.location.search;
+    if (search && search.length > 1) {
+      target += (target.indexOf('?') >= 0 ? '&' : '?') + search.substring(1);
+    }
+    return target;
+  }
+
+  function escapeHTML(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  // Allow safe inline tags inside comment text (we control the source — only re-apply our mention span)
+  function renderCommentText(text) {
+    // text is authored by us in COMMENTS; we keep it as-is to support <span class="ig-mention">
+    return text;
+  }
+
+  var VERIFIED_SVG =
+    '<span class="ig-verified" aria-label="Verificado">' +
+      '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' +
+        '<path d="M12 1l2.4 2.4 3.3-.4.6 3.3 3 1.4-1.4 3 1.4 3-3 1.4-.6 3.3-3.3-.4L12 21l-2.4-2.4-3.3.4-.6-3.3-3-1.4 1.4-3-1.4-3 3-1.4.6-3.3 3.3.4L12 1zm-1 13.4l5.6-5.6-1.4-1.4L11 11.6l-2.2-2.2L7.4 10.8 11 14.4z"/>' +
+      '</svg>' +
+    '</span>';
+
+  var HEART_SVG =
+    '<svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>' +
+    '</svg>';
+
+  function buildCommentNode(c) {
+    var avatarClass = 'ig-avatar' + (c.ring ? ' is-ring' : '');
+    var verifiedHTML = c.verified ? VERIFIED_SVG : '';
+    var likesText = c.likes === 1 ? '1 curtida' : c.likes + ' curtidas';
+
+    return (
+      '<div class="ig-comment">' +
+        '<div class="' + avatarClass + '">' +
+          '<img src="' + c.avatar + '" alt="" loading="lazy" referrerpolicy="no-referrer">' +
+        '</div>' +
+        '<div class="ig-body">' +
+          '<div class="ig-top">' +
+            '<div class="ig-text-wrap">' +
+              '<span class="ig-user">' + escapeHTML(c.user) + '</span>' +
+              verifiedHTML +
+              '<span class="ig-text">' + renderCommentText(c.text) + '</span>' +
+              '<div class="ig-meta">' +
+                '<span class="ig-time">' + escapeHTML(c.time) + '</span>' +
+                '<span class="ig-likes" data-base-likes="' + c.likes + '">' + likesText + '</span>' +
+                '<span class="ig-reply">Responder</span>' +
+              '</div>' +
+            '</div>' +
+            '<button type="button" class="ig-heart" aria-label="Curtir" aria-pressed="false">' +
+              HEART_SVG +
+            '</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+
+  function buildCommentsHTML() {
+    var headerSvg =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+        '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>' +
+      '</svg>';
+
+    var html =
+      '<div class="ig-comments" aria-label="Comentários">' +
+        '<div class="ig-comments-header">' +
+          headerSvg +
+          '<span><strong>' + COMMENTS.length + ' comentários</strong> · veja o que estão dizendo</span>' +
+        '</div>';
+
+    for (var i = 0; i < COMMENTS.length; i++) {
+      var c = COMMENTS[i];
+      html += buildCommentNode(c);
+
+      if (c.replies && c.replies.length) {
+        var rid = 'ig-replies-' + i;
+        html +=
+          '<button type="button" class="ig-replies-toggle" aria-controls="' + rid + '" aria-expanded="false" data-count="' + c.replies.length + '">' +
+            '<span class="ig-replies-dash"></span>' +
+            '<span class="ig-replies-label">Ver ' + (c.replies.length === 1 ? 'resposta' : 'respostas') + ' (' + c.replies.length + ')</span>' +
+          '</button>' +
+          '<div class="ig-replies" id="' + rid + '">';
+        for (var r = 0; r < c.replies.length; r++) {
+          html += buildCommentNode(c.replies[r]);
+        }
+        html += '</div>';
+      }
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  function bindCommentInteractions(root) {
+    // Heart toggle (works for top-level comments and replies)
+    var hearts = root.querySelectorAll('.ig-heart');
+    for (var i = 0; i < hearts.length; i++) {
+      hearts[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var btn = e.currentTarget;
+        var liked = btn.classList.toggle('is-liked');
+        btn.setAttribute('aria-pressed', liked ? 'true' : 'false');
+        // Update likes count next to it
+        var meta = btn.parentNode.querySelector('.ig-likes');
+        if (meta) {
+          var base = parseInt(meta.getAttribute('data-base-likes'), 10) || 0;
+          var n = base + (liked ? 1 : 0);
+          meta.textContent = n === 1 ? '1 curtida' : n + ' curtidas';
+        }
+      });
+    }
+
+    // Replies toggle
+    var toggles = root.querySelectorAll('.ig-replies-toggle');
+    for (var j = 0; j < toggles.length; j++) {
+      toggles[j].addEventListener('click', function(e) {
+        e.preventDefault();
+        var btn = e.currentTarget;
+        var id = btn.getAttribute('aria-controls');
+        var box = document.getElementById(id);
+        if (!box) return;
+        var opened = box.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+        var label = btn.querySelector('.ig-replies-label');
+        var count = parseInt(btn.getAttribute('data-count'), 10) || 0;
+        var word = count === 1 ? 'resposta' : 'respostas';
+        label.textContent = opened
+          ? 'Ocultar ' + word
+          : 'Ver ' + word + ' (' + count + ')';
+      });
+    }
+  }
+
+  function render() {
+    var q = QUESTIONS[currentIndex];
+    var isFinal = currentIndex === QUESTIONS.length - 1;
+    var isFirst = currentIndex === 0;
+
+    var premiumHeader = isFirst ? (
+      '<div class="quiz-private-header">' +
+        '<div class="quiz-private-badge">' +
+          '<svg class="quiz-private-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+            '<rect x="4" y="11" width="16" height="10" rx="2"/>' +
+            '<path d="M8 11V7a4 4 0 0 1 8 0v4"/>' +
+          '</svg>' +
+          '<span class="quiz-private-label">Aula Privada</span>' +
+        '</div>' +
+        '<div class="quiz-private-divider"></div>' +
+      '</div>'
+    ) : '';
+
+    var commentsBlock = isFirst ? buildCommentsHTML() : '';
+
+    if (isFinal) {
+      var href = buildVSLHref();
+      cardEl.innerHTML =
+        premiumHeader +
+        (q.kicker ? '<div class="quiz-kicker">' + q.kicker + '</div>' : '') +
+        (q.intro ? '<p class="quiz-intro">' + q.intro + '</p>' : '') +
+        '<h1 class="quiz-question">' + q.question + '</h1>' +
+        '<div class="quiz-actions">' +
+          '<a class="btn btn-primary is-final" href="' + href + '" data-answer="yes">' + q.yesLabel + '</a>' +
+          '<a class="btn-no" href="' + href + '" data-answer="no">' + q.noLabel + '</a>' +
+        '</div>' +
+        commentsBlock;
+    } else {
+      cardEl.innerHTML =
+        premiumHeader +
+        (q.kicker ? '<div class="quiz-kicker">' + q.kicker + '</div>' : '') +
+        (q.intro ? '<p class="quiz-intro">' + q.intro + '</p>' : '') +
+        '<h1 class="quiz-question">' + q.question + '</h1>' +
+        '<div class="quiz-actions">' +
+          '<button class="btn btn-primary" type="button" data-answer="yes">' + q.yesLabel + '</button>' +
+          '<button class="btn-no" type="button" data-answer="no">' + q.noLabel + '</button>' +
+        '</div>' +
+        commentsBlock;
+    }
+
+    var btns = cardEl.querySelectorAll('[data-answer]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', onAnswer);
+    }
+    if (isFirst) {
+      bindCommentInteractions(cardEl);
+    }
+    updateProgress();
+  }
+
+  function onAnswer(e) {
+    var value = e.currentTarget.getAttribute('data-answer');
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'quiz_answer',
+      quiz_step: currentIndex + 1,
+      quiz_answer: value
+    });
+
+    if (currentIndex >= QUESTIONS.length - 1) {
+      // Last question — anchor handles navigation natively, just fire complete event
+      window.dataLayer.push({ event: 'quiz_complete' });
+      return;
+    }
+
+    cardEl.classList.add('is-out');
+    setTimeout(function() {
+      currentIndex++;
+      render();
+      // garantir reflow antes de tirar a classe
+      requestAnimationFrame(function() {
+        cardEl.classList.remove('is-out');
+      });
+    }, 220);
+  }
+
+  // Disclaimer toggle
+  var dToggle = document.getElementById('disclaimerToggle');
+  var d1 = document.getElementById('disclaimer1');
+  var d2 = document.getElementById('disclaimer2');
+  dToggle.addEventListener('click', function() {
+    var open = d1.classList.toggle('is-open');
+    d2.classList.toggle('is-open', open);
+    dToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  render();
+</script>
+
+</body>
+</html>
